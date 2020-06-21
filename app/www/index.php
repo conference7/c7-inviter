@@ -1,11 +1,12 @@
 <html>
 <head>
-	<title>Create ICS File</title>
+	<title>C7 Inviter - Easily generate ICS files.</title>
 	<link rel="stylesheet" href="style.css"/>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript"
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRlhCP1T5ZuvfVgGudUubXGLV7g95sEcQ&libraries=places"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <div class="flex w-full h-full items-center flex flex-col mt-6 md:mt-12">
@@ -41,28 +42,28 @@
 					<label for="summary"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Title
 						/ Summary</label>
-					<input type="text" name="summary" value="Test <?php echo time(); ?>" data-source="title"
+					<input type="text" name="summary" value="" placeholder="What's the title of your event?" data-source="title"
 						   class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block"
 					/>
 				</div>
 				<div class="input-container mb-4 w-full">
 					<label for="location"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Location</label>
-					<input type="text" name="location" value="" data-source="where"
+					<input type="text" name="location" value="" data-source="where" placeholder="Where is it taking place?"
 						   class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 				<div class="input-container w-full md:w-1/2 mb-4 md:mb-0">
 					<label for="date_start"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Event
 						Start</label>
-					<input type="text" name="date_start" value="" data-source="when"
+					<input type="text" name="date_start" value="" data-source="when" placeholder="When does it start?"
 						   class="datepicker pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 				<div class="input-container w-full md:w-1/2">
 					<label for="date_end"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Event
 						End</label>
-					<input type="text" name="date_end" value="" data-source="when"
+					<input type="text" name="date_end" value="" data-source="when" placeholder="When does it end?"
 						   class="datepicker pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 				<div class="note mb-2 text-white text-xs w-full flex justify-end">
@@ -72,30 +73,30 @@
 				<div class="input-container mb-4 w-full">
 					<label for="description"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Description</label>
-					<textarea type="text" name="description" value="" rows="4" data-source="description"
-							  class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">Test</textarea>
+					<textarea type="text" name="description" value="" rows="4" data-source="description" placeholder="What's the best way to describe your event?"
+							  class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block"></textarea>
 				</div>
 				<div class="input-container mb-4 w-full">
 					<label for="url"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Website</label>
-					<input type="text" name="url" value="https://c7.com" data-source="url"
+					<input type="text" name="url" value="" data-source="url" placeholder="Where can we find more information?"
 						   class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 				<div class="input-container mb-4 w-full md:w-1/2">
 					<label for="url"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">Organizer</label>
-					<input type="text" name="organizer" value="C7" data-source="organizer"
+					<input type="text" name="organizer" value="" data-source="organizer" placeholder="Who's organising?"
 						   class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 				<div class="input-container mb-4 w-full md:w-1/2">
 					<label for="url"
 						   class="ml-2 -mb-4 text-white text-base bg-orange-300 inline-block w-auto px-3 py-1 z-20 relative">E-mail
 						address</label>
-					<input type="text" name="organizer_email" value="marinus@mklasen.nl" data-source="organizer_email"
+					<input type="text" name="organizer_email" value="" data-source="organizer_email" placeholder="Organizer e-mail"
 						   class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 			</form>
-			<div class="invite h-full md:pt-4 w-full lg:w-7/12 lg:ml-12 flex flex-col" id="invite">
+			<div class="invite h-full md:pt-4 w-full lg:w-7/12 ml-6 lg:ml-12 flex flex-col" id="invite">
 				<div class="bg-white p-4 pt-3 mb-8 rounded shadow">
 					<h2 class="text-xl mb-3 empty" data-target="title">Sample data</h2>
 					<div class="">
@@ -165,13 +166,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="text-white text-center text-xs italic mb-1">&copy; copyright <?php echo date( 'Y' ); ?>
-			conference7.
+		<div class="text-white text-center text-xs italic mb-1">&copy; Copyright <?php echo date( 'Y' ); ?>
+			Conference7 - online solutions for conferences
 		</div>
 	</div>
 	<div class="py-3">
-		<a class="text-orange-300 text-sm" href="https://conference7.com">Tools for conferences -
-			conference7.com</a>
+
 	</div>
 </div>
 </body>
