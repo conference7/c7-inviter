@@ -1,0 +1,24 @@
+{
+    "name": "conference7/inviter",
+    "description": "Composer setup for the C7 inviter",
+    "license" : "GPL-2.0+",
+    "config": {
+        "vendor-dir": "app/vendor"
+    },
+    "autoload": {
+        "classmap": [
+        ]
+    },
+    "authors": [
+        {
+            "name": "Marinus Klasen",
+            "email": "marinus@mklasen.nl"
+        }
+    ],
+    "require": {
+        "mailgun/mailgun-php": "^3.0",
+        "kriswallsmith/buzz": "^1.1",
+        "nyholm/psr7": "^1.3",
+        "vlucas/phpdotenv": "^5.0"
+    }
+}

@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.empty {
+    @apply bg-gray-400 w-3/4 text-transparent;
+}
