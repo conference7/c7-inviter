@@ -114,9 +114,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
           var newValue = source.value; // Combine start/end
 
           if (source.dataset.source === 'when') {
-            var date_start = form.querySelector('[name="date_start"]').nextSibling;
-            var date_end = form.querySelector('[name="date_end"]').nextSibling;
-            console.log(date_start);
+            var date_start = form.querySelector('[name="date_start"]');
+            var date_end = form.querySelector('[name="date_end"]');
             newValue = date_start.value + ' - ' + date_end.value;
           }
 
