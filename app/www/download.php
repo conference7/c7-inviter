@@ -80,7 +80,7 @@ if ( isset( $_POST['url'] ) && ! empty( $_POST['url'] ) ) {
 }
 
 if ( isset( $_POST['organizer'] ) && ! empty( $_POST['organizer'] ) ) {
-	$data['ORGANIZER;'] = 'CN="' . $_POST['organizer'] . '":mailto:' . $_POST['organizer_email'];
+	$data['ORGANIZER;'] = 'CN=' . $_POST['organizer'] . ':MAILTO:' . $_POST['organizer_email'];
 }
 
 $invite = 'BEGIN:VCALENDAR' . "\n";
