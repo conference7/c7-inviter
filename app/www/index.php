@@ -167,11 +167,12 @@
 			</div>
 		</div>
 		<div class="text-white text-center text-xs italic mb-1">&copy; Copyright <?php echo date( 'Y' ); ?>
-			Conference7 - online solutions for conferences
+			<a href="https://conference7.com">Conference7 - online solutions for conferences</a>
 		</div>
 	</div>
-	<div class="py-3">
-
+	<div class="p-2 pt-8 w-full xl:w-2/3 text-gray-800">
+		<h1 class="font-bold">What is the C7 inviter?</h1>
+		<p>This tool helps you creating calendar invites. Fill in all information and click "Download". You will get an .ics file that you can share either as e-mail attachment, via chat, or publish on your website.</p>
 	</div>
 </div>
 </body>
