@@ -96,7 +96,7 @@
 						   class="pt-4 px-4 pb-2 border-orange-200 border w-full shadow outline-none block">
 				</div>
 			</form>
-			<div class="invite h-full md:pt-4 w-full lg:w-7/12 ml-6 lg:ml-12 flex flex-col" id="invite">
+			<div class="invite h-full md:pt-4 w-full lg:w-7/12 md:ml-6 lg:ml-12 flex flex-col" id="invite">
 				<div class="bg-white p-4 pt-3 mb-8 rounded shadow">
 					<h2 class="text-xl mb-3 empty" data-target="title">Sample data</h2>
 					<div class="">
