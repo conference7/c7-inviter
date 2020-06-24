@@ -4,6 +4,10 @@
 	<meta property="og:title" content="C7 Inviter - Create calendar invites easily" />
 	<meta property="og:url" content="https://invite.conference7.com" />
 	<meta property="og:image" content="https://invite.conference7.com/images/media.png" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@conference7HQ" />
+	<meta name="twitter:creator" content="@conference7HQ" />
+	<meta property="og:description" content="This tool helps you creating calendar invites. Fill in all information and click 'Download'. You will get an .ics file that you can share either as e-mail attachment, via chat, or publish on your website." />
 	<link rel="stylesheet" href="style.css"/>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript"
