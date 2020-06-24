@@ -1,6 +1,9 @@
 <html>
 <head>
-	<title>C7 Inviter - Easily generate ICS files.</title>
+	<title>Conference7 inviter - Create calendar invites easily</title>
+	<meta property="og:title" content="C7 Inviter - Create calendar invites easily" />
+	<meta property="og:url" content="https://invite.conference7.com" />
+	<meta property="og:image" content="https://invite.conference7.com/images/media.png" />
 	<link rel="stylesheet" href="style.css"/>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript"
